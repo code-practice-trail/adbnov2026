@@ -1,0 +1,13 @@
+customer_id,customer_name,email,city,state,postal_code,registration_date,status,source_system,age
+C001,Ravi Kumar,ravi.k@example.com,Hyderabad,Telangana,500018,2025-11-05,ACTIVE,APP,34
+C002,Priya Sharma,priya.s@example.com,Bengaluru,Karnataka,560001,2025-11-11,active,WEB,29
+C003,John Mathew,john.m@example.com,Chennai,Tamil Nadu,600001,2025-12-01,Active,APP,31
+C004,Anjali Rao,anjali.r@example.com, Hyderabad ,Telangana,500081,2025-12-09,ACTIVE,WEB,
+C005,David Paul,david.p@example.com,Pune,Maharashtra,411001,2026-01-02,INACTIVE,APP,42
+C006,Suresh Kumar,suresh.k@example.com,Hyderabad,Telangana,500032,2026-01-12,ACTIVE,WEB,38
+C007,Meena Singh,meena.s@example.com,Delhi,Delhi,110001,2026-02-02,ACTIVE,APP,27
+C008,Arjun Reddy,arjun.r@example.com,Bengaluru,Karnataka,560103,2026-02-12,ACTIVE,WEB,35
+C009,Kiran Babu,kiran.b@example.com,Hyderabad,Telangana,500072,2026-03-01,ACTIVE,APP,unknown
+C010,Sneha Das,sneha.d@example.com,,West Bengal,700001,2026-03-05,ACTIVE,WEB,26
+C011,Pooja Nair,pooja.n@example.com,Kochi,Kerala,682001,2026-03-18,inactive,APP,33
+C012,Rahul Verma,rahul.v@example.com,Mumbai,Maharashtra,400001,2026-04-01,ACTIVE,WEB,39
