@@ -1,0 +1,10 @@
+{
+  "project": "retail",
+  "classes": [
+    1,
+    2,
+    3
+  ],
+  "default_mode": "Databricks Free Edition / serverless",
+  "dataset_policy": "Official training dataset pack only"
+}
