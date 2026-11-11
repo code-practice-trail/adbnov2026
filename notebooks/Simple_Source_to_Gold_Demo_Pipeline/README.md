@@ -50,7 +50,6 @@ Source Volume:
 demo_source_files
 ```
 
-## Teaching explanation
 
 ```text
 Source
