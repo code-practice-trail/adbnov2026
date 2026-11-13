@@ -1,0 +1,73 @@
+resources:
+  jobs:
+    shopstream_job:
+      name: shopstream_retail_pipeline
+      description: Checksummed source → Bronze → validated Silver/CDC → reconciled Gold publication
+      max_concurrent_runs: 1
+      performance_target: STANDARD
+      timeout_seconds: 14400
+      queue:
+        enabled: true
+      tags:
+        aidevkit_project: ai-dev-kit
+        project: shopstream
+        data_classification: synthetic_training
+        environment: ${bundle.target}
+      schedule:
+        quartz_cron_expression: '0 0 2 * * ?'
+        timezone_id: Asia/Kolkata
+        pause_status: PAUSED
+      parameters:
+        - name: catalog
+          default: ${var.catalog}
+        - name: schema
+          default: ${var.schema}
+        - name: volume
+          default: ${var.volume}
+        - name: source_path
+          default: ${workspace.file_path}/data
+        - name: run_id
+          default: '{{job.run_id}}'
+        - name: max_reject_rate
+          default: ${var.max_reject_rate}
+        - name: dirty_reject_rate
+          default: ${var.dirty_reject_rate}
+      tasks:
+        - task_key: preflight
+          max_retries: 1
+          min_retry_interval_millis: 60000
+          timeout_seconds: 1800
+          notebook_task:
+            notebook_path: ../notebooks/01_preflight.py
+        - task_key: bronze
+          depends_on:
+            - task_key: preflight
+          max_retries: 1
+          min_retry_interval_millis: 60000
+          timeout_seconds: 3600
+          notebook_task:
+            notebook_path: ../notebooks/02_bronze.py
+        - task_key: silver
+          depends_on:
+            - task_key: bronze
+          max_retries: 1
+          min_retry_interval_millis: 60000
+          timeout_seconds: 5400
+          notebook_task:
+            notebook_path: ../notebooks/03_silver.py
+        - task_key: gold
+          depends_on:
+            - task_key: silver
+          max_retries: 1
+          min_retry_interval_millis: 60000
+          timeout_seconds: 3600
+          notebook_task:
+            notebook_path: ../notebooks/04_gold.py
+        - task_key: validate_publish
+          depends_on:
+            - task_key: gold
+          max_retries: 1
+          min_retry_interval_millis: 60000
+          timeout_seconds: 3600
+          notebook_task:
+            notebook_path: ../notebooks/05_validate_publish.py

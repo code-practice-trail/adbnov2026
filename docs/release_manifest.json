@@ -1,0 +1,19 @@
+{
+  "dataset_manifest_sha256": "b9c926281400d340ececbdae18be0b94506fbae5211b0748b518c65931c19dbc",
+  "notebooks": {
+    "00_run_all.py": "66b5f0ed8bfb51e7bafbf578446426e2a192dd859510d6b0d9083a2a582c6c57",
+    "01_preflight.py": "876770b6a1efe5df6830cdf7bfceddf07ab6f13e454a6462a20aff089e001339",
+    "02_bronze.py": "c33c227d87f3a6e2989f584f4abed6989c0966919f784844c2e610e8651951ce",
+    "03_silver.py": "74e5d23daf0636c267841dada5d817f92d3c95ce1cd8c0605e2dda46815b9413",
+    "04_gold.py": "9382883a4bc675a0b5bc134e0dce381604fb555bdbcd7e5cbc6ed5dedb3f8865",
+    "05_validate_publish.py": "46c6e19e16e5d0911a8384c691a4277b07df1c7d0b52e6ed11ce8fb1b8d3314f",
+    "_common.py": "2a627426a3b9af80d67eff4ce9cf7287818e8d843a48f84c5a9cf25f3af2cc6b"
+  },
+  "job_config_sha256": "f1bef0a9d7286d9c4cbc84ac5d4db5b003ad7ff09ab69b548ee321912c4dc60f",
+  "initial_successful_run": "16289876451759",
+  "replay_run": "321804241941412",
+  "workspace": "https://adb-7405609019767524.4.azuredatabricks.net",
+  "bundle_config_sha256": "299820448f3cab088c57c34bf28c61205ee8433d5c8368b342f8075e763865b7",
+  "tests_sha256": "efe8b69bd24826562b384f56fed059f194959e697e326909c8d441c693c51490",
+  "replay_status": "SUCCESS"
+}

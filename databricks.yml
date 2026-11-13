@@ -1,0 +1,54 @@
+# Declarative Automation Bundle for the supplied ShopStream dataset.
+bundle:
+  name: novtrain
+  uuid: 679c7a1a-1da3-4011-9167-61e25fcca444
+
+# Original sample resources are preserved, but excluded from this retail deployment.
+include:
+  - resources/shopstream.job.yml
+
+variables:
+  catalog:
+    description: Existing Unity Catalog catalog
+    default: wsadbnov
+  schema:
+    description: Isolated schema for this pipeline and its operational tables
+  volume:
+    description: Managed source landing and checkpoint volume
+    default: shopstream_landing
+  max_reject_rate:
+    default: '0.10'
+  dirty_reject_rate:
+    description: Five of eight intentionally dirty input rows are rejected (three invalid, one missing mode, one duplicate)
+    default: '0.65'
+
+sync:
+  include:
+    - notebooks/**
+    - data/**
+  exclude:
+    - src/**
+    - tests/**
+    - fixtures/**
+    - tools/**
+    - artifacts/**
+    - examples/**
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      host: https://adb-7405609019767524.4.azuredatabricks.net
+    variables:
+      schema: shopstream_dev_${workspace.current_user.short_name}
+  prod:
+    mode: production
+    workspace:
+      host: https://adb-7405609019767524.4.azuredatabricks.net
+      root_path: /Workspace/Users/rk3924726@gmail.com/.bundle/${bundle.name}/${bundle.target}
+    variables:
+      schema: shopstream_prod
+    permissions:
+      - user_name: rk3924726@gmail.com
+        level: CAN_MANAGE

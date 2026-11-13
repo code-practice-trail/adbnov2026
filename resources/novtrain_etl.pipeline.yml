@@ -1,0 +1,20 @@
+# The main pipeline for novtrain
+
+resources:
+  pipelines:
+    novtrain_etl:
+      name: novtrain_etl
+      catalog: ${var.catalog}
+      schema: ${var.schema}
+      serverless: true
+      root_path: "../src/novtrain_etl"
+
+      libraries:
+        - glob:
+            include: ../src/novtrain_etl/transformations/**
+
+      environment:
+        dependencies:
+          # We include every dependency defined by pyproject.toml by defining an editable environment
+          # that points to the folder where pyproject.toml is deployed.
+          - --editable ${workspace.file_path}

@@ -1,0 +1,22 @@
+{
+  "run_id": "321804241941412",
+  "status": "SUCCESS",
+  "orders": 126,
+  "current_customers": 13,
+  "customer_versions": 17,
+  "persistent_stream_events": 25,
+  "reported_stream_events": 25,
+  "cleaned_dirty_rows": 3,
+  "passed_checks": 21,
+  "tasks": {
+    "gold": "SUCCESS",
+    "preflight": "SUCCESS",
+    "bronze": "SUCCESS",
+    "validate_publish": "SUCCESS",
+    "silver": "SUCCESS"
+  },
+  "view_object_id_before": "c652138c-a337-4224-acb5-8601ee13a0b4",
+  "view_object_id_after": "c652138c-a337-4224-acb5-8601ee13a0b4",
+  "prior_publication_retained_during_replay": true,
+  "run_url": "https://adb-7405609019767524.4.azuredatabricks.net/jobs/1125303763706499/runs/321804241941412?o=7405609019767524"
+}

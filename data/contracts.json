@@ -1,0 +1,157 @@
+{
+  "city_region_lookup": {
+    "file": "city_region_lookup.csv",
+    "columns": [
+      "city",
+      "region"
+    ],
+    "keys": [
+      "city"
+    ],
+    "rows": 7
+  },
+  "customer_updates_cdc": {
+    "file": "customer_updates_cdc.csv",
+    "columns": [
+      "customer_id",
+      "customer_name",
+      "email",
+      "city",
+      "status",
+      "update_ts",
+      "op"
+    ],
+    "keys": [
+      "customer_id",
+      "update_ts"
+    ],
+    "rows": 5
+  },
+  "customers": {
+    "file": "customers.csv",
+    "columns": [
+      "customer_id",
+      "customer_name",
+      "email",
+      "city",
+      "state",
+      "postal_code",
+      "registration_date",
+      "status",
+      "source_system",
+      "age"
+    ],
+    "keys": [
+      "customer_id"
+    ],
+    "rows": 12
+  },
+  "dirty_daily_sales": {
+    "file": "dirty_daily_sales.csv",
+    "columns": [
+      "order_id",
+      "customer_id",
+      "customer_name",
+      "city",
+      "product_name",
+      "quantity",
+      "unit_price",
+      "payment_mode",
+      "order_date",
+      "customer_status"
+    ],
+    "keys": [
+      "order_id"
+    ],
+    "rows": 8
+  },
+  "inventory_snapshot": {
+    "file": "inventory_snapshot.csv",
+    "columns": [
+      "product_id",
+      "warehouse_id",
+      "stock_qty",
+      "snapshot_date"
+    ],
+    "keys": [
+      "product_id",
+      "warehouse_id",
+      "snapshot_date"
+    ],
+    "rows": 30
+  },
+  "order_items": {
+    "file": "order_items.csv",
+    "columns": [
+      "order_item_id",
+      "order_id",
+      "product_id",
+      "quantity",
+      "unit_price",
+      "discount_pct",
+      "line_amount"
+    ],
+    "keys": [
+      "order_item_id"
+    ],
+    "rows": 259
+  },
+  "orders": {
+    "file": "orders.csv",
+    "columns": [
+      "order_id",
+      "customer_id",
+      "order_ts",
+      "order_status",
+      "shipping_city",
+      "channel"
+    ],
+    "keys": [
+      "order_id"
+    ],
+    "rows": 126
+  },
+  "payments": {
+    "file": "payments.csv",
+    "columns": [
+      "payment_id",
+      "order_id",
+      "payment_mode",
+      "amount",
+      "payment_status",
+      "payment_ts"
+    ],
+    "keys": [
+      "payment_id"
+    ],
+    "rows": 126
+  },
+  "products": {
+    "file": "products.csv",
+    "columns": [
+      "product_id",
+      "product_name",
+      "category",
+      "subcategory",
+      "list_price",
+      "cost_price",
+      "status"
+    ],
+    "keys": [
+      "product_id"
+    ],
+    "rows": 10
+  },
+  "skew_sales": {
+    "file": "skew_sales.csv",
+    "columns": [
+      "txn_id",
+      "city",
+      "amount"
+    ],
+    "keys": [
+      "txn_id"
+    ],
+    "rows": 1000
+  }
+}

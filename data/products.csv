@@ -1,0 +1,11 @@
+product_id,product_name,category,subcategory,list_price,cost_price,status
+P001,Laptop Pro 14,Electronics,Computers,55000.00,42000.00,ACTIVE
+P002,Wireless Mouse,Electronics,Accessories,850.00,520.00,ACTIVE
+P003,Mechanical Keyboard,Electronics,Accessories,2500.00,1700.00,ACTIVE
+P004,27in Monitor,Electronics,Displays,14500.00,11000.00,ACTIVE
+P005,Office Chair,Furniture,Office,9800.00,7000.00,ACTIVE
+P006,Running Shoes,Fashion,Footwear,3200.00,1800.00,ACTIVE
+P007,Coffee Maker,Home,Appliances,4500.00,3100.00,ACTIVE
+P008,Tablet 11,Electronics,Tablets,22000.00,17500.00,ACTIVE
+P009,Smartphone X,Electronics,Mobiles,38000.00,30000.00,ACTIVE
+P010,Backpack,Fashion,Bags,1800.00,950.00,INACTIVE

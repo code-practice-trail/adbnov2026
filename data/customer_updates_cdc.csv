@@ -1,0 +1,6 @@
+customer_id,customer_name,email,city,status,update_ts,op
+C001,Ravi Kumar,ravi.new@example.com,Hyderabad,ACTIVE,2026-07-10 10:00:00,U
+C002,Priya Sharma,priya.s@example.com,Bengaluru,INACTIVE,2026-07-10 10:05:00,U
+C013,Nikhil Jain,nikhil.j@example.com,Hyderabad,ACTIVE,2026-07-10 10:10:00,I
+C004,Anjali Rao,anjali.r@example.com,Hyderabad,ACTIVE,2026-07-10 10:12:00,U
+C004,Anjali Rao,anjali.latest@example.com,Hyderabad,ACTIVE,2026-07-10 10:15:00,U

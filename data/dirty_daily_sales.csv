@@ -1,0 +1,9 @@
+order_id,customer_id,customer_name,city,product_name,quantity,unit_price,payment_mode,order_date,customer_status
+O9001,C001, Ravi Kumar ,HYDERABAD,Laptop Pro 14,1,55000.00,UPI,2026/07/01,ACTIVE
+O9002,C002,PRIYA SHARMA,bengaluru,Wireless Mouse,2,850,card,01-07-2026,active
+O9003,C003,John Mathew,Chennai,Mechanical Keyboard,,2500.00,COD,2026-07-01,Active
+O9004,C004,Anjali Rao, Hyderabad ,27in Monitor,2,ABC,CARD,2026-07-02,ACTIVE
+O9005,C005,David Paul,Pune,Office Chair,1,9800.00,,2026-07-02,INACTIVE
+O9006,,Suresh Kumar,Hyderabad,Running Shoes,2,3200.00,UPI,bad-date,ACTIVE
+O9007,C007,Meena Singh,Delhi,Coffee Maker,1,4500.00,UPI,2026-07-03,ACTIVE
+O9007,C007,Meena Singh,Delhi,Coffee Maker,1,4500.00,UPI,2026-07-03,ACTIVE

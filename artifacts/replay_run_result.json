@@ -1,0 +1,240 @@
+﻿{
+  "cleanup_duration": 0,
+  "creator_user_name": "rk3924726@gmail.com",
+  "effective_performance_target": "STANDARD",
+  "end_time": 1794571872077,
+  "execution_duration": 0,
+  "job_id": 1125303763706499,
+  "job_parameters": [
+    {
+      "default": "wsadbnov",
+      "name": "catalog"
+    },
+    {
+      "default": "shopstream_dev_rk3924726",
+      "name": "schema"
+    },
+    {
+      "default": "shopstream_landing",
+      "name": "volume"
+    },
+    {
+      "default": "/Workspace/Users/rk3924726@gmail.com/.bundle/novtrain/dev/files/data",
+      "name": "source_path"
+    },
+    {
+      "default": "{{job.run_id}}",
+      "name": "run_id"
+    },
+    {
+      "default": "0.10",
+      "name": "max_reject_rate"
+    },
+    {
+      "default": "0.65",
+      "name": "dirty_reject_rate"
+    }
+  ],
+  "job_run_id": 321804241941412,
+  "number_in_job": 321804241941412,
+  "original_attempt_run_id": 321804241941412,
+  "run_duration": 692754,
+  "run_id": 321804241941412,
+  "run_name": "[dev rk3924726] shopstream_retail_pipeline",
+  "run_page_url": "https://adb-7405609019767524.4.azuredatabricks.net/?o=7405609019767524#job/1125303763706499/run/321804241941412",
+  "run_type": "JOB_RUN",
+  "setup_duration": 0,
+  "start_time": 1794571179323,
+  "state": {
+    "life_cycle_state": "TERMINATED",
+    "result_state": "SUCCESS",
+    "state_message": "",
+    "user_cancelled_or_timedout": false
+  },
+  "status": {
+    "state": "TERMINATED",
+    "termination_details": {
+      "code": "SUCCESS",
+      "message": "",
+      "type": "SUCCESS"
+    }
+  },
+  "tasks": [
+    {
+      "attempt_number": 0,
+      "cleanup_duration": 0,
+      "depends_on": [
+        {
+          "task_key": "silver"
+        }
+      ],
+      "effective_performance_target": "STANDARD",
+      "end_time": 1794571833188,
+      "execution_duration": 35000,
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/rk3924726@gmail.com/.bundle/novtrain/dev/files/notebooks/04_gold",
+        "source": "WORKSPACE"
+      },
+      "run_id": 1123046290603433,
+      "run_if": "ALL_SUCCESS",
+      "run_page_url": "https://adb-7405609019767524.4.azuredatabricks.net/?o=7405609019767524#job/1125303763706499/run/1123046290603433",
+      "setup_duration": 2000,
+      "start_time": 1794571795494,
+      "state": {
+        "life_cycle_state": "TERMINATED",
+        "result_state": "SUCCESS",
+        "state_message": "",
+        "user_cancelled_or_timedout": false
+      },
+      "status": {
+        "state": "TERMINATED",
+        "termination_details": {
+          "code": "SUCCESS",
+          "message": "",
+          "type": "SUCCESS"
+        }
+      },
+      "task_key": "gold"
+    },
+    {
+      "attempt_number": 0,
+      "cleanup_duration": 0,
+      "effective_performance_target": "STANDARD",
+      "end_time": 1794571557089,
+      "execution_duration": 191000,
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/rk3924726@gmail.com/.bundle/novtrain/dev/files/notebooks/01_preflight",
+        "source": "WORKSPACE"
+      },
+      "run_id": 384793024019278,
+      "run_if": "ALL_SUCCESS",
+      "run_page_url": "https://adb-7405609019767524.4.azuredatabricks.net/?o=7405609019767524#job/1125303763706499/run/384793024019278",
+      "setup_duration": 186000,
+      "start_time": 1794571179383,
+      "state": {
+        "life_cycle_state": "TERMINATED",
+        "result_state": "SUCCESS",
+        "state_message": "",
+        "user_cancelled_or_timedout": false
+      },
+      "status": {
+        "state": "TERMINATED",
+        "termination_details": {
+          "code": "SUCCESS",
+          "message": "",
+          "type": "SUCCESS"
+        }
+      },
+      "task_key": "preflight"
+    },
+    {
+      "attempt_number": 0,
+      "cleanup_duration": 0,
+      "depends_on": [
+        {
+          "task_key": "preflight"
+        }
+      ],
+      "effective_performance_target": "STANDARD",
+      "end_time": 1794571639315,
+      "execution_duration": 79000,
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/rk3924726@gmail.com/.bundle/novtrain/dev/files/notebooks/02_bronze",
+        "source": "WORKSPACE"
+      },
+      "run_id": 391814667706478,
+      "run_if": "ALL_SUCCESS",
+      "run_page_url": "https://adb-7405609019767524.4.azuredatabricks.net/?o=7405609019767524#job/1125303763706499/run/391814667706478",
+      "setup_duration": 2000,
+      "start_time": 1794571557751,
+      "state": {
+        "life_cycle_state": "TERMINATED",
+        "result_state": "SUCCESS",
+        "state_message": "",
+        "user_cancelled_or_timedout": false
+      },
+      "status": {
+        "state": "TERMINATED",
+        "termination_details": {
+          "code": "SUCCESS",
+          "message": "",
+          "type": "SUCCESS"
+        }
+      },
+      "task_key": "bronze"
+    },
+    {
+      "attempt_number": 0,
+      "cleanup_duration": 0,
+      "depends_on": [
+        {
+          "task_key": "gold"
+        }
+      ],
+      "effective_performance_target": "STANDARD",
+      "end_time": 1794571871432,
+      "execution_duration": 34000,
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/rk3924726@gmail.com/.bundle/novtrain/dev/files/notebooks/05_validate_publish",
+        "source": "WORKSPACE"
+      },
+      "run_id": 756362063333353,
+      "run_if": "ALL_SUCCESS",
+      "run_page_url": "https://adb-7405609019767524.4.azuredatabricks.net/?o=7405609019767524#job/1125303763706499/run/756362063333353",
+      "setup_duration": 3000,
+      "start_time": 1794571833732,
+      "state": {
+        "life_cycle_state": "TERMINATED",
+        "result_state": "SUCCESS",
+        "state_message": "",
+        "user_cancelled_or_timedout": false
+      },
+      "status": {
+        "state": "TERMINATED",
+        "termination_details": {
+          "code": "SUCCESS",
+          "message": "",
+          "type": "SUCCESS"
+        }
+      },
+      "task_key": "validate_publish"
+    },
+    {
+      "attempt_number": 0,
+      "cleanup_duration": 0,
+      "depends_on": [
+        {
+          "task_key": "bronze"
+        }
+      ],
+      "effective_performance_target": "STANDARD",
+      "end_time": 1794571794864,
+      "execution_duration": 151000,
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/rk3924726@gmail.com/.bundle/novtrain/dev/files/notebooks/03_silver",
+        "source": "WORKSPACE"
+      },
+      "run_id": 921689575122577,
+      "run_if": "ALL_SUCCESS",
+      "run_page_url": "https://adb-7405609019767524.4.azuredatabricks.net/?o=7405609019767524#job/1125303763706499/run/921689575122577",
+      "setup_duration": 3000,
+      "start_time": 1794571639896,
+      "state": {
+        "life_cycle_state": "TERMINATED",
+        "result_state": "SUCCESS",
+        "state_message": "",
+        "user_cancelled_or_timedout": false
+      },
+      "status": {
+        "state": "TERMINATED",
+        "termination_details": {
+          "code": "SUCCESS",
+          "message": "",
+          "type": "SUCCESS"
+        }
+      },
+      "task_key": "silver"
+    }
+  ],
+  "trigger": "ONE_TIME"
+}

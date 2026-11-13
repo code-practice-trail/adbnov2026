@@ -1,0 +1,5 @@
+{"event_id": "SE021", "order_id": "SO0021", "customer_id": "C009", "event_ts": "2026-07-01T10:00:00", "amount": 3250.0, "status": "PLACED"}
+{"event_id": "SE022", "order_id": "SO0022", "customer_id": "C010", "event_ts": "2026-07-01T10:03:00", "amount": 3387.5, "status": "CANCELLED"}
+{"event_id": "SE023", "order_id": "SO0023", "customer_id": "C011", "event_ts": "2026-07-01T10:06:00", "amount": 3525.0, "status": "PLACED"}
+{"event_id": "SE024", "order_id": "SO0024", "customer_id": "C012", "event_ts": "2026-07-01T10:09:00", "amount": 3662.5, "status": "PLACED"}
+{"event_id": "SE025", "order_id": "SO0025", "customer_id": "C001", "event_ts": "2026-07-01T10:12:00", "amount": 3800.0, "status": "PLACED"}

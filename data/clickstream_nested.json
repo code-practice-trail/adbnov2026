@@ -1,0 +1,3 @@
+{"event_id": "E001", "customer_id": "C001", "event_ts": "2026-07-01T10:00:00", "device": {"type": "mobile", "os": "Android"}, "items": [{"product_id": "P001", "qty": 1}, {"product_id": "P002", "qty": 2}], "attributes": {"campaign": "summer", "source": "push"}}
+{"event_id": "E002", "customer_id": "C002", "event_ts": "2026-07-01T10:01:00", "device": {"type": "web", "os": "Windows"}, "items": [{"product_id": "P006", "qty": 1}], "attributes": {"campaign": "organic", "source": "search"}}
+{"event_id": "E003", "customer_id": "C003", "event_ts": "2026-07-01T10:03:00", "device": {"type": "mobile", "os": "iOS"}, "items": [], "attributes": {"campaign": "summer", "source": "email"}}
